@@ -6,7 +6,7 @@ Summary:   A tool for managing symbolic links
 
 License:   Apache-2.0
 URL:       https://github.com/loicrouchon/symly
-Source0:   https://github.com/loicrouchon/symly/archive/refs/tags/v0.8.2.tar.gz
+Source0:   https://loicrouchon.com/static/symly-0.8.2.tar.gz
 
 BuildArch: noarch
 BuildRequires: java-17-openjdk-devel, ant, picocli
