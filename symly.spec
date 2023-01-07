@@ -1,12 +1,11 @@
-# Generated with JReleaser 1.4.0 at 2023-01-04T23:07:42.256911+01:00
 Name:      symly
-Version:   0.8.2
+Version:   0-dev
 Release:   1%{?dist}
 Summary:   A tool for managing symbolic links
 
 License:   Apache-2.0
 URL:       https://github.com/loicrouchon/symly
-Source0:   https://loicrouchon.com/static/symly-0.8.2.tar.gz
+Source0:   https://github.com/loicrouchon/symly/archive/refs/tags/v0-dev.tar.gz
 
 BuildArch: noarch
 BuildRequires: java-17-openjdk-devel, ant, picocli
@@ -21,7 +20,7 @@ symbolic links.
 
 %prep
 
-%setup -q -n symly-0.8.2
+%setup -q -n symly-0-dev
 %build
 ant -f src/packaging/fedora/build.xml
 
