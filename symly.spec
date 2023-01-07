@@ -1,15 +1,15 @@
 Name:      symly
-Version:   0.9.3
+Version:   0.9.4
 Release:   1%{?dist}
 Summary:   A tool for managing symbolic links
 
 License:   Apache-2.0
 URL:       https://github.com/loicrouchon/symly
-Source0:   https://github.com/loicrouchon/symly/archive/refs/tags/v0.9.3.tar.gz
+Source0:   https://github.com/loicrouchon/symly/archive/refs/tags/v0.9.4.tar.gz
 
 BuildArch: noarch
 BuildRequires: java-17-openjdk-devel, ant, picocli
-Requires: java, picocli
+Requires: java-latest-openjdk-headless, picocli
 
 %description
 Symly is a tool helping to centralize sparse file trees.
@@ -20,7 +20,7 @@ symbolic links.
 
 %prep
 
-%setup -q -n symly-0.9.3
+%setup -q -n symly-0.9.4
 %build
 ant -f src/packaging/fedora/build.xml
 
