@@ -1,12 +1,12 @@
 Name:      jvm-finder
-Version:   0.2.1
+Version:   0.2.2
 Release:   1%{?dist}
 Summary:   A tool for finding an appropriate installed JVM to run your program
 
 License:   Apache-2.0
 URL:       https://github.com/loicrouchon/jvm-finder
-# Source0:   https://github.com/loicrouchon/jvm-finder/archive/refs/tags/v0.2.1.tar.gz
-Source0:   https://github.com/loicrouchon/jvm-finder/archive/refs/heads/packaging/fedora.zip
+Source0:   https://github.com/loicrouchon/jvm-finder/archive/refs/tags/v0.2.2.tar.gz
+# Source0:   https://github.com/loicrouchon/jvm-finder/archive/refs/heads/<BRANCH>.zip
 
 BuildArch: x86_64 aarch64
 BuildRequires: make, java-latest-openjdk-devel, golang
@@ -20,7 +20,7 @@ and what kind of features (java, javac, native-image, ...) it should provide.
 
 %prep
 
-%setup -q -n jvm-finder-packaging-fedora
+%setup -q -n jvm-finder-0.2.2
 %build
 GO_LD_FLAGS='-linkmode=external' make test build
 
