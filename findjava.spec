@@ -1,11 +1,11 @@
 Name:      findjava
-Version:   0.3.1
+Version:   0.3.2
 Release:   1%{?dist}
 Summary:   A tool for finding an appropriate installed JVM to run your program
 
 License:   Apache-2.0
 URL:       https://github.com/loicrouchon/findjava
-Source0:   https://github.com/loicrouchon/findjava/archive/refs/tags/v0.3.1.tar.gz
+Source0:   https://github.com/loicrouchon/findjava/archive/refs/tags/v0.3.2.tar.gz
 # Source0:   https://github.com/loicrouchon/findjava/archive/refs/heads/<BRANCH>.zip
 
 BuildArch: x86_64 aarch64
@@ -20,9 +20,9 @@ and what kind of features (java, javac, native-image, ...) it should provide.
 
 %prep
 
-%setup -q -n findjava-0.3.1
+%setup -q -n findjava-0.3.2
 %build
-GO_LD_FLAGS='-linkmode=external' make test build
+GO_LD_FLAGS='-linkmode=external' GO_TAGS="-tags linux" make test build
 
 %install
 %define distdir build
