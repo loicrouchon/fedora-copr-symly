@@ -1,16 +1,16 @@
 # https://docs.fedoraproject.org/en-US/java-packaging-howto/packaging_maven_project/
 
 Name:      symly
-Version:   0.11.5
+Version:   0.11.6
 Release:   1%{?dist}
 Summary:   A tool for managing symbolic links
 
 License:   Apache-2.0
 URL:       https://github.com/loicrouchon/symly
-Source0:   https://github.com/loicrouchon/symly/archive/refs/tags/v0.11.5.tar.gz
+Source0:   https://github.com/loicrouchon/symly/archive/refs/tags/v0.11.6.tar.gz
 
 BuildArch: noarch
-BuildRequires: java-latest-openjdk-devel, ant, picocli
+BuildRequires: java-17-openjdk-devel, ant, picocli
 Requires: java-latest-openjdk-headless, picocli
 
 %description
@@ -20,7 +20,7 @@ or more repository layers into a directory by creating
 symbolic links.
 
 %prep
-%setup -q -n symly-0.11.5
+%setup -q -n symly-0.11.6
 
 %build
 cat /etc/fedora-release
@@ -28,7 +28,7 @@ ls -l /usr/lib/jvm
 java --version
 javac --version
 echo "$JAVA_HOME"
-ant -f tools/packaging/fedora/build.xml -Dproject.version="0.11.5" -v
+ant -f tools/packaging/fedora/build.xml -Dproject.version="0.11.6" -v
 
 %install
 %define distdir target/distributions/fedora
